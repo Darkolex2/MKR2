@@ -1,4 +1,13 @@
 # recipe/views.py
+# recipe/views.py
+
+from django.shortcuts import render
+from .models import Recipe
+
+def main(request):
+    recipes = Recipe.objects.filter(date__year=2023)
+    return render(request, 'recipe/main.html', {'recipes': recipes})
+
 
 from django.shortcuts import render, get_object_or_404
 from .models import Recipe
