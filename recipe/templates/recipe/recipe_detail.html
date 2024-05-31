@@ -1,0 +1,13 @@
+<!-- recipe/templates/recipe/recipe_detail.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ recipe.title }}</title>
+</head>
+<body>
+    <h1>{{ recipe.title }}</h1>
+    <p>{{ recipe.description }}</p>
+    <p><a href="{% url 'main' %}">Back to all recipes</a></p>
+</body>
+</html>
